@@ -1,0 +1,82 @@
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+.bg-gradient {
+  background: linear-gradient(135deg, #f5f7fa 0%, #e4e9f2 100%);
+}
+
+.text-gradient {
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(90deg, #0066cc, #0099ff);
+}
+
+.card-hover {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.btn-primary {
+  @apply bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-md transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50;
+}
+
+.btn-secondary {
+  @apply bg-gray-100 hover:bg-gray-200 text-gray-800 font-medium py-2 px-4 rounded-md transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-gray-300 focus:ring-opacity-50;
+}
+
+.btn-accent {
+  @apply bg-green-600 hover:bg-green-700 text-white font-medium py-2 px-4 rounded-md transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-50;
+}
+
+.input-field {
+  @apply w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500;
+}
+
+.section-title {
+  @apply text-xl font-semibold text-gray-800 mb-4;
+}
+
+.resume-section {
+  @apply bg-white p-4 rounded-lg shadow-sm mb-4;
+}
+
+.drag-handle {
+  @apply cursor-move text-gray-400 hover:text-gray-600;
+}
+
+.tooltip {
+  @apply invisible absolute z-10 py-1 px-2 bg-gray-800 text-white text-xs rounded-md opacity-0 transition-opacity duration-200;
+}
+
+.has-tooltip:hover .tooltip {
+  @apply visible opacity-100;
+}
+
+.ats-score-high {
+  @apply text-green-600;
+}
+
+.ats-score-medium {
+  @apply text-yellow-600;
+}
+
+.ats-score-low {
+  @apply text-red-600;
+}
